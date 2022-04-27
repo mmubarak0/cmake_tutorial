@@ -52,15 +52,15 @@ set(CMAKE_CXX_STANDARD 14)
 # add flags here like -pthread 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall ")
 
-# or use MATCHES to see if actual system name 
-# Darwin is Apple's system name
-if(${CMAKE_SYSTEM_NAME} MATCHES Linux)
-    message("This is a Linux system")
-elseif(${CMAKE_SYSTEM_NAME} MATCHES Windows)
-    message("This is a Windows System")
-elseif(${CMAKE_SYSTEM_NAME} MATCHES Darwin)
+if(APPLE)
     message("This is an Apple System")
-elseif(${CMAKE_SYSTEM_NAME} MATCHES Windows)
+elseif(WIN32)
+    message("This is a Windows System")
+    # you may need to install minGW and then add the bin folder to your path
+
+elseif(UNIX)
+    message("This is a Linux system")  
+elseif(${CMAKE_SYSTEM_NAME} MATCHES Android)
     message("This is an Android System")
 endif()
 
