@@ -72,11 +72,11 @@ add_executable(hello main.cpp)
 </br>  
 </br>  
 
-    code CMakeLists.txt
+    code main.cpp
 
 or 
 
-    vim CMakeLists.txt
+    vim main.cpp
 
 then copy the code below 
 
