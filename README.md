@@ -106,7 +106,7 @@ int main() {
 
         you can make some alias and function to make this a little shorter
         ```
-        function gcmake { cmake -G "MinGW Makefiles"  }
+        function gcmake { cmake -G "MinGW Makefiles" .. }
         Set-Alias -Name make -Value mingw32-make.exe
         ```
         > if you add those two lines to powershell profile it will be saved to any new sessions you follow this [guide](https://www.howtogeek.com/50236/customizing-your-powershell-profile/)
@@ -114,7 +114,7 @@ int main() {
         ```
         Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
         ```
-        then you can normally use ` gcmake ` instead of `cmake -G "MinGW Makefiles"`  
+        then you can normally use ` gcmake ` instead of `cmake -G "MinGW Makefiles" ..`  
         and use `make` instead of `mingw32-make`
 
 
