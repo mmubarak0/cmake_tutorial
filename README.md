@@ -58,8 +58,8 @@ elseif(WIN32)
     message("This is a Windows System")
     # you may need to install minGW and then add the bin folder to your path
 
-elseif(UNIX)
-    message("This is a Linux system")  
+elseif(${CMAKE_SYSTEM_NAME} MATCHES Linux)
+    message("This is a Linux system")
 elseif(${CMAKE_SYSTEM_NAME} MATCHES Android)
     message("This is an Android System")
 endif()
